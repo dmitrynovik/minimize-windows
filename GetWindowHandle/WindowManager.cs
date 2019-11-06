@@ -16,7 +16,7 @@ namespace GetWindowHandle
         [DllImport("user32.dll")]
         static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
-        static IEnumerable<IntPtr> EnumWindows(int processId)
+        public IEnumerable<IntPtr> EnumWindows(int processId)
         {
             var handles = new List<IntPtr>();
 
